@@ -1,4 +1,5 @@
 import axios from 'axios'
+import type { AxiosRequestConfig } from 'axios'
 const url = import.meta.env.VITE_API_URL
 
 const instance = axios.create({
@@ -14,4 +15,7 @@ instance.interceptors.response.use(
     return Promise.reject(error)
   }
 )
-export default instance
+const request = <T, D = ResponseResult<T>>(config: AxiosRequestConfig) => {
+  return instance.request<D>(config)
+}
+export default request
