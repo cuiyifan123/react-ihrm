@@ -9,6 +9,9 @@ const instance = axios.create({
 
 instance.interceptors.response.use(
   (response) => {
+    if (!response.data.success) {
+      return Promise.reject(new Error(response.data.message))
+    }
     return response
   },
   (error) => {

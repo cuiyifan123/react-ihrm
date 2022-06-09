@@ -28,5 +28,6 @@
       "path": "./tsconfig.node.json"
     }
   ],
-  "extends": "./tsconfig.path.json"
+  "extends": "./tsconfig.path.json",
+  "plugins": [{"name":"typescript-plugin-css-modules"}]
 }

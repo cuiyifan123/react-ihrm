@@ -12,8 +12,8 @@ export default defineConfig({
   server: {
     proxy: {
       // 使用 proxy 实例
-      '/api': {
-        target: 'http://192.168.72.79:3000',
+      '^/api': {
+        target: 'http://192.168.72.24:3000',
         changeOrigin: true
       }
     }

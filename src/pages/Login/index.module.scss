@@ -1,0 +1,70 @@
+$formWidth: 450px;
+
+.root {
+    background: url(@/static/common/login.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    :global {
+        .head {
+            font-size: 50px;
+            color: white;
+            font-weight: 200;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        // .input-context {
+        //     position: relative;
+
+        //     .icon {
+        //         position: absolute;
+        //         left: 15px;
+        //         top: 15px;
+        //         z-index: 999;
+        //         font-size: 16px;
+        //         color: #889aa4;
+        //     }
+        // }
+
+        .ant-input-affix-wrapper>input.ant-input {
+            background-color: hsla(0, 0%, 100%, .7) !important;
+            width: $formWidth;
+            height: 40px;
+            padding-left: 10px;
+            color: #68b0fe;
+        }
+
+        .ant-input-prefix {
+            margin-top: 1px;
+            color: #34495e;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            width: 495px;
+            height: 60px;
+            font-size: 28px;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+
+        .tips {
+            width: $formWidth;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .ant-input-status-error {
+            background-color: hsla(0, 0%, 100%, .7) !important;
+        }
+    }
+}
